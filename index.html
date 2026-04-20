@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vibrant Todo App</title>
+ <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+<div class="toggle" onclick="toggleMode()">🌙</div>
+
+<div class="container">
+  <h1>✨ Todo App</h1>
+
+  <div class="progress-container">
+    <div class="progress-header">
+      <div class="progress-title">📊 Your Productivity</div>
+      <div class="progress-info" id="progressText">0% completed</div>
+    </div>
+
+    <div class="progress-bar">
+      <div class="progress-fill" id="progressFill"></div>
+    </div>
+  </div>
+
+  <div class="top-stats">
+    <div class="box total"><div id="total" class="number">0</div>Total</div>
+    <div class="box completed"><div id="completed" class="number">0</div>Done</div>
+    <div class="box pending"><div id="pending" class="number">0</div>Left</div>
+  </div>
+
+  <div class="filters">
+    <button onclick="setFilter('all')">All</button>
+    <button onclick="setFilter('completed')">Completed</button>
+    <button onclick="setFilter('pending')">Pending</button>
+  </div>
+
+  <div class="input-section">
+    <input id="taskInput" placeholder="Enter task">
+    <button onclick="addTask()">Add</button>
+  </div>
+
+  <ul id="taskList"></ul>
+</div>
+
+<div id="toast" class="toast"></div>
+
+<script src="./script.js"></script>
+</body>
+</html>
